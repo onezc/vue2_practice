@@ -1,15 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 // 组件通信
-import CommunicationPage from '../views/CommunicationPage'
+// import CommunicationPage from '../views/CommunicationPage'
+// slot使用
+import SlotPage from '../views/SlotPage'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'CommunicationPage',
-    component: CommunicationPage
+    name: 'SlotPage',
+    component: SlotPage
   }
   // {
   //   path: '/about',
