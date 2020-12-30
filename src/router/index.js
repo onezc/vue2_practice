@@ -3,15 +3,17 @@ import VueRouter from 'vue-router'
 // 组件通信
 // import CommunicationPage from '../views/CommunicationPage'
 // slot使用
-import SlotPage from '../views/SlotPage'
+// import SlotPage from '../views/SlotPage'
+// form 组件封装
+import FormPage from '../views/FormPage'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'SlotPage',
-    component: SlotPage
+    name: 'FormPage',
+    component: FormPage
   }
   // {
   //   path: '/about',
