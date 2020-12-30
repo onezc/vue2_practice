@@ -16,7 +16,7 @@ export default {
   methods: {
     onInput(e) {
       this.$emit('input', e.target.value)
-      console.log(this.$parent.$emit('validate'))
+      this.$parent.$emit('validate')
     }
   }
 }
