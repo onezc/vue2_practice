@@ -5,15 +5,17 @@ import VueRouter from 'vue-router'
 // slot使用
 // import SlotPage from '../views/SlotPage'
 // form 组件封装
-import FormPage from '../views/FormPage'
+// import FormPage from '../views/FormPage'
+// 递归组件封装
+import TreePage from '../views/TreePage'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'FormPage',
-    component: FormPage
+    name: 'TreePage',
+    component: TreePage
   }
   // {
   //   path: '/about',
