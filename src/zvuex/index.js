@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
+import Vuex from './zvuex'
 
 Vue.use(Vuex)
 
@@ -15,13 +15,12 @@ export default new Vuex.Store({
   },
   mutations: {
     add(state, num = 1) {
-      // console.log(this) // zc-print
+      console.log(this) // zc-print
       state.num += num
     }
   },
   actions: {
     asyncAdd({ commit }, num) {
-      console.log(this) // zc-print
       setTimeout(() => {
         commit('add', num)
       }, 1000)
