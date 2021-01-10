@@ -8,15 +8,14 @@ class Store {
 
     const computed = {}
     this.getters = {}
-    const _store = this
     Object.keys(this._wrapGetters).forEach(key => {
-      computed[key] = function() {
-        return _store._wrapGetters[key](_store.state)
+      computed[key] = () => {
+        return this._wrapGetters[key](this.state)
       }
-      Object.defineProperty(_store.getters, key, {
+      Object.defineProperty(this.getters, key, {
         get: () => {
           console.log(key) // zc-print
-          return _store._vm[key]
+          return this._vm[key]
         }
       })
     })

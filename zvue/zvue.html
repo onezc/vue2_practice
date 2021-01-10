@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <p>{{now}}</p>
+  </div>
+  <script src="./zvue.js"></script>
+  <script>
+    const vm = new ZVue({
+      el: '#app',
+      data: {
+        now: new Date().toLocaleTimeString()
+      }
+    })
+    setInterval(() => {
+      vm.now = new Date().toLocaleTimeString()
+    }, 1000)
+  </script>
+</body>
+</html>
